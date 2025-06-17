@@ -3,12 +3,11 @@ OwnerId  int identity (1,1) primary key,
 F_name  varchar(10) not null,
 L_name  varchar(10),
 Email   varchar(50),
-Phone    varchar (20) not null,
 constraint uq_email unique (Email)
 );
 
-create table owneraddress(
-_address varchar(50),
+create table ownerphone(
+phone varchar(50),
 OwnerId  int ,
 constraint owner_fk foreign key (OwnerId) references _Owner (OwnerId)
    on delete cascade
